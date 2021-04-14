@@ -23,8 +23,6 @@ func NewKafkaProducer() *ckafka.Producer {
 	return p
 }
 
-// cannot use &topic (value of type *int32) as *string value in struct literalcompiler
-
 // Publish is simple function created to publish new message to kafka
 func Publish(msg string, topic string, producer *ckafka.Producer) error {
 	message := &ckafka.Message{
